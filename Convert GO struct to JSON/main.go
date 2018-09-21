@@ -1,12 +1,3 @@
-# go-cookbook
-
-* [Convert GO struct to JSON](#Convert-GO-struct-to-JSON)
-
-
-
-## Convert GO struct to JSON
-See the [example code]().
-```go
 package main
 
 import (
@@ -20,16 +11,16 @@ type Person struct {
 }
 
 func main() {
-	p := &Person{
+	p := Person{
 		Name: "Eason",
 		Age:  10,
 	}
-	b, err := json.Marshal(p)
+
+	o := []interface{}{"123", 3, p}
+	b, err := json.Marshal(o)
 	if err != nil {
-		panic(err)
+		fmt.Printf("Error: %s", err)
 	}
 
 	fmt.Println(string(b))
 }
-
-```
