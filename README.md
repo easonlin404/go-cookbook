@@ -2,6 +2,7 @@
 
 * [Convert GO struct to JSON](#convert-go-struct-to-json)
 * [Convert JSON to GO struct](#convert-json-to-go-struct)
+* [Pass slice as a function argument](#pass-slice-as-a-function-argument)
 
 ## Convert GO struct to JSON
 See the [example code](https://github.com/easonlin404/go-cookbook/blob/master/convert-go-struct-to-json/main.go).
@@ -53,6 +54,34 @@ func main() {
 	}
 
 	fmt.Printf("data: %v\n", data)
+}
+
+```
+
+## Pass slice as a function argument
+See the [example code](https://github.com/easonlin404/go-cookbook/blob/master/pass-slice-as-a-function-argument/main.go).
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	s := []int{1, 2, 3}
+	appendSlice(s)
+	fmt.Println(s)
+
+	modifySlice(s)
+	fmt.Println(s)
+}
+
+func appendSlice(s []int) {
+	s = append(s, 4)
+}
+
+func modifySlice(s []int) {
+	s[0] = 0
 }
 
 ```
