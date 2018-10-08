@@ -4,6 +4,12 @@
 * [Convert JSON to GO struct](#convert-json-to-go-struct)
 * [Pass slice as a function argument](#pass-slice-as-a-function-argument)
 
+
+
+# Question
+* [Composition in Go](https://github.com/easonlin404/go-cookbook/blob/master/composition-question/main.go)
+* [Interface in Go](https://github.com/easonlin404/go-cookbook/blob/master/interface-question/main.go)
+
 ## Convert GO struct to JSON
 See the [example code](https://github.com/easonlin404/go-cookbook/blob/master/convert-go-struct-to-json/main.go).
 ```go
